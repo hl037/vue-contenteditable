@@ -38,7 +38,7 @@ This needed files are already provided in ``dist/``, but if you want to re build
 
 .. code::
 
-    cpm run build
+    npm run build
 
 Directely in html
 `````````````````
