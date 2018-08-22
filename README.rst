@@ -29,6 +29,14 @@ In your ``main.js`` :
     import contenteditable from 'vue-contenteditable'
     Vue.use(contenteditable)
 
+(Re)build
+`````````
+
+This needed files are already provided in ``dist/``, but if you want to re build, simlply run :
+
+.. code::
+    cpm run build
+
 Directely in html
 `````````````````
 
