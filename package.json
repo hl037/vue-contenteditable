@@ -1,0 +1,23 @@
+{
+  "name": "contenteditable",
+  "version": "1.0.0",
+  "main": "dist/contenteditable.umd.js",
+  "module": "dist/contenteditable.esm.js",
+  "unpkg": "dist/contenteditable.min.js",
+  "browser": {
+    "./sfc": "src/contenteditable.vue"
+  },
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/contenteditable.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/contenteditable.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/contenteditable.min.js"
+  },
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
