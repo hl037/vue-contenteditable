@@ -20,12 +20,14 @@ Installation
 With a build system
 ```````````````````
 
-::
+.. code:: 
+
     npm install --save vue-contenteditable
 
 In your ``main.js`` :
 
-::
+.. code:: javascript
+
     import contenteditable from 'vue-contenteditable'
     Vue.use(contenteditable)
 
@@ -34,13 +36,15 @@ In your ``main.js`` :
 
 This needed files are already provided in ``dist/``, but if you want to re build, simlply run :
 
-::
+.. code::
+
     cpm run build
 
 Directely in html
 `````````````````
 
-::
+.. code:: html
+
 	 <script src="contenteditable.min.js"></script>
 
 Usage
@@ -48,7 +52,8 @@ Usage
 
 Where you need a ``contenteditable`` element :
 
-::
+.. code:: javascript
+
     <template>
       <contenteditable tag="div" :contenteditable="isEditable" v-model="message" :noNL="true" @returned="enterPressed" />
     </template>
