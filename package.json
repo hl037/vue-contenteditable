@@ -1,6 +1,20 @@
 {
-  "name": "contenteditable",
+  "name": "vue-contenteditable",
   "version": "1.0.0",
+  "description": "Vue.js plugin providing a <contenteditable/> element supporting v-model. It also provides some (optional) features, like preventing html input / paste or new lines.",
+  "keywords": [
+    "Vue",
+    "directive",
+    "contenteditable"
+  ],
+  "homepage" : "https://github.com/hl037/vue-contenteditable",
+  "bugs" : "https://github.com/hl037/vue-contenteditable/issues",
+  "license" : "MIT",
+  "author": { "name" : "Léo Flaventin Hauchecorne"
+    , "email" : "hl037.prog@gmail.com"
+    , "url" : "http://leo-flaventin.com"
+  },
+  
   "main": "dist/contenteditable.umd.js",
   "module": "dist/contenteditable.esm.js",
   "unpkg": "dist/contenteditable.min.js",
