@@ -124,7 +124,7 @@ var c = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._s
   watch : {
     value: function value(newval, oldval){
       if(newval != this.current_content()){
-        changeVal(newval);
+        this.update_content(newval);
       }
     }
   }

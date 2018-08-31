@@ -130,7 +130,7 @@
     watch : {
       value: function value(newval, oldval){
         if(newval != this.current_content()){
-          changeVal(newval);
+          this.update_content(newval);
         }
       }
     }

@@ -12,7 +12,7 @@ Should you use a content editable ?
 
 The response is generally **NO**.
 
-But... there are edges case where neither ``<input/>`` nor ``<textarea>`` could suit, for example when you need a dynamic object size to adapt to user input text size.
+But... there are edge cases where neither ``<input/>`` nor ``<textarea>`` could suit, for example when you need a dynamic object size to adapt to user input text size.
 
 Installation
 ------------
@@ -34,7 +34,7 @@ In your ``main.js`` :
 (Re)build
 `````````
 
-This needed files are already provided in ``dist/``, but if you want to re build, simlply run :
+The needed files are already provided in ``dist/``, but if you want to re build, simlply run :
 
 .. code::
 
