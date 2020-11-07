@@ -1,8 +1,3 @@
-
-<style scoped>
-
-</style>
-
 <template>
   <component
     :is="tag"
@@ -49,86 +44,81 @@
   </component>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent, onMounted, ref, watch } from "@vue/composition-api";
 
 function replaceAll(str, search, replacement) {
   return str.split(search).join(replacement);
-};
-
-export default {
-  name : 'contenteditable',
-  props : {
-    'tag' : String,
-    'contenteditable' : {
-      type : Boolean,
-      default : true,
-    },
-    'value' : String,
-    'noHTML' : {
-      type : Boolean,
-      default : true,
-    },
-    'noNL' : {
-      type : Boolean,
-      default : false,
-    },
-  },
-  mounted(){
-    this.update_content(this.value);
-  },
-  computed : {
-  },
-  data() {
-    return {
-    }
-  },
-  methods : {
-    current_content(){
-      return this.noHTML ? 
-        this.$refs.element.innerText
-        :
-        this.$refs.element.innerHTML;
-    },
-    update_content(newcontent){
-      if(this.noHTML) {
-        this.$refs.element.innerText = newcontent;
-      }
-      else {
-        this.$refs.element.innerHTML = newcontent;
-      }
-    },
-    update(event) {
-      this.$emit('input', this.current_content());
-    },
-    onPaste(event) {
-      event.preventDefault();
-      let text = (event.originalEvent || event).clipboardData.getData('text/plain');
-      if(this.noNL) {
-        text = replaceAll(text, '\r\n', ' ');
-        text = replaceAll(text, '\n', ' ');
-        text = replaceAll(text, '\r', ' ');
-      }
-      window.document.execCommand('insertText', false, text);
-      this.fwdEv(event)
-    },
-    onKeypress(event) {
-      if(event.key == 'Enter' && this.noNL) {
-        event.preventDefault();
-        this.$emit('returned', this.current_content);
-      }
-      this.fwdEv(event)
-    },
-    fwdEv(event){
-      this.$emit(event.type, event);
-    }
-  },
-  watch : {
-    value(newval, oldval){
-      if(newval != this.current_content()){
-        this.update_content(newval);
-      }
-    }
-  }
 }
+
+export default defineComponent({
+  props: {
+    tag: { type: String, default: "div" },
+    value: { type: String, default: "" },
+    contenteditable: {
+      type: Boolean,
+      default: true
+    },
+    noHTML: {
+      type: Boolean,
+      default: true
+    },
+    noNL: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup(props, context) {
+    const element = ref(null);
+    function current_content() {
+      return props.noHTML ? element.value.innerText : element.value.innerHTML;
+    }
+    function update_content(newcontent) {
+      if (props.noHTML) {
+        element.value.innerText = newcontent;
+      } else {
+        element.value.innerHTML = newcontent;
+      }
+    }
+    function update(event) {
+      context.emit("input", current_content());
+    }
+    function onPaste(event) {
+      event.preventDefault();
+      let text = (event.originalEvent || event).clipboardData.getData(
+        "text/plain"
+      );
+      if (props.noNL) {
+        text = replaceAll(text, "\r\n", " ");
+        text = replaceAll(text, "\n", " ");
+        text = replaceAll(text, "\r", " ");
+      }
+      window.document.execCommand("insertText", false, text);
+      fwdEv(event);
+    }
+    function onKeypress(event) {
+      if (event.key == "Enter" && props.noNL) {
+        event.preventDefault();
+        context.emit("returned", current_content);
+      }
+      fwdEv(event);
+    }
+    function fwdEv(event) {
+      context.emit(event.type, event);
+    }
+    onMounted(() => update_content(props.value));
+
+    watch(
+      () => props.value,
+      newval => {
+        if (newval != current_content()) {
+          update_content(newval);
+        }
+      }
+    );
+    return { element, update, update_content, onKeypress, onPaste, fwdEv };
+  }
+});
 </script>
 
+<style scoped></style>
