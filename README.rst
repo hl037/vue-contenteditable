@@ -55,7 +55,7 @@ Where you need a ``contenteditable`` element :
 .. code:: javascript
 
     <template>
-      <contenteditable tag="div" :contenteditable="isEditable" v-model="message" :noNL="true" @returned="enterPressed" />
+      <contenteditable tag="div" :contenteditable="isEditable" :value="message" :noNL="true" @returned="enterPressed" />
     </template>
      
     <script>
