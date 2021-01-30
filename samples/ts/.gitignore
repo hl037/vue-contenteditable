@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
-.browserslistrc
-dist/demo.html
+/dist
+.yalc*
 
 
 # local env files
@@ -22,11 +22,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-# yarn
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*

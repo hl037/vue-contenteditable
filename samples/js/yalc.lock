@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "vue-contenteditable": {
+      "signature": "c8fea6a9858b663b651dd4c9a2e15a68",
+      "file": true,
+      "replaced": "^3.0.0"
+    }
+  }
+}

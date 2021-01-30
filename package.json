@@ -1,37 +1,36 @@
 {
   "name": "vue-contenteditable",
-  "version": "1.0.2",
-  "description": "Vue.js plugin providing a <contenteditable/> element supporting v-model. It also provides some (optional) features, like preventing html input / paste or new lines.",
-  "keywords": [
-    "Vue",
-    "directive",
-    "contenteditable"
-  ],
-  "homepage": "https://github.com/hl037/vue-contenteditable",
-  "bugs": "https://github.com/hl037/vue-contenteditable/issues",
-  "license": "MIT",
-  "author": {
-    "name": "Léo Flaventin Hauchecorne",
-    "email": "hl037.prog@gmail.com",
-    "url": "http://leo-flaventin.com"
-  },
-  "main": "dist/contenteditable.umd.js",
-  "module": "dist/contenteditable.esm.js",
-  "unpkg": "dist/contenteditable.min.js",
-  "browser": {
-    "./sfc": "src/contenteditable.vue"
-  },
+  "version": "3.0.0",
   "scripts": {
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/contenteditable.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/contenteditable.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/contenteditable.min.js"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name vue-contenteditable src/main.ts",
+    "lint": "vue-cli-service lint",
+    "bundleDts": "vue-cli-service bundle-dts --name vue-contenteditable --createIndex"
+  },
+  "main": "dist/vue-contenteditable.umd.min.js",
+  "files": [
+    "dist/*",
+    "index.d.ts"
+  ],
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "dts-bundle": "^0.7.3",
+    "vue": "^3.0.0"
   },
   "devDependencies": {
-    "rollup": "^0.57.1",
-    "rollup-plugin-buble": "^0.19.2",
-    "rollup-plugin-vue": "^3.0.0",
-    "vue": "^2.5.16",
-    "vue-template-compiler": "^2.5.16"
-  }
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "@hl037/vue-cli-plugin-ts-bundler": "hl037/vue-cli-plugin-ts-bundler.git",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "typescript": "~3.9.3"
+  },
+  "entry": "src/main.ts",
+  "typings": "dist/vue-contenteditable.d.ts"
 }
