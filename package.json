@@ -1,6 +1,6 @@
 {
   "name": "vue-contenteditable",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-contenteditable src/main.ts",
