@@ -17,7 +17,7 @@ But... there are edge cases where neither `<input/>` nor `<textarea>` could suit
 
 ## Installation
 
-NODE : Version 3.0.0 is only compatible with VueJS v3+. For VueJS v2, please install the version 1.0.2.
+NOTE : Version 3.0.0 is only compatible with VueJS v3+. For VueJS v2, please install the version 1.0.2.
 
 ### With a build system
 
