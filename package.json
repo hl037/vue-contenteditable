@@ -1,12 +1,22 @@
 {
   "name": "vue-contenteditable",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-contenteditable src/main.ts",
     "lint": "vue-cli-service lint",
     "bundleDts": "vue-cli-service bundle-dts --name vue-contenteditable --createIndex"
   },
+  "author": "Léo Falventin Hauchecorne",
+  "description" : "This plugin provides a `<contenteditable/>` element supporting `v-model`. It also provides some (optional) features, like preventing html input and paste, or new lines.",
+  "keywords": ["vue", "vuejs", "vue 3", "vue.js 3", "contenteditable", "input", "vue-contenteditable", "v-model"],
+  "homepage" : "https://github.com/hl037/vue-contenteditable",
+  "bugs": {
+     "url" : "https://github.com/hl037/vue-contenteditable/issues",
+     "email" : "hl037.prog@gmail.com"
+  },
+  "license" : "MIT",
+  "repository": "github:hl037/vue-contenteditable",
   "main": "dist/vue-contenteditable.umd.min.js",
   "files": [
     "dist/*",
@@ -14,7 +24,6 @@
   ],
   "dependencies": {
     "core-js": "^3.6.5",
-    "dts-bundle": "^0.7.3",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -27,6 +36,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@hl037/vue-cli-plugin-ts-bundler": "hl037/vue-cli-plugin-ts-bundler.git",
+    "dts-bundle": "^0.7.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
     "typescript": "~3.9.3"
