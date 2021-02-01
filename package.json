@@ -8,14 +8,23 @@
     "bundleDts": "vue-cli-service bundle-dts --name vue-contenteditable --createIndex"
   },
   "author": "Léo Falventin Hauchecorne",
-  "description" : "This plugin provides a `<contenteditable/>` element supporting `v-model`. It also provides some (optional) features, like preventing html input and paste, or new lines.",
-  "keywords": ["vue", "vuejs", "vue 3", "vue.js 3", "contenteditable", "input", "vue-contenteditable", "v-model"],
-  "homepage" : "https://github.com/hl037/vue-contenteditable",
+  "description": "This plugin provides a `<contenteditable/>` element supporting `v-model`. It also provides some (optional) features, like preventing html input and paste, or new lines.",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue 3",
+    "vue.js 3",
+    "contenteditable",
+    "input",
+    "vue-contenteditable",
+    "v-model"
+  ],
+  "homepage": "https://github.com/hl037/vue-contenteditable",
   "bugs": {
-     "url" : "https://github.com/hl037/vue-contenteditable/issues",
-     "email" : "hl037.prog@gmail.com"
+    "url": "https://github.com/hl037/vue-contenteditable/issues",
+    "email": "hl037.prog@gmail.com"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "repository": "github:hl037/vue-contenteditable",
   "main": "dist/vue-contenteditable.umd.min.js",
   "files": [
