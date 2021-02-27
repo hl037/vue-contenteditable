@@ -31,8 +31,7 @@
     "dist/*",
     "index.d.ts"
   ],
-  "dependencies": {
-    "core-js": "^3.6.5",
+  "peerDependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -45,6 +44,7 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-typescript": "^5.0.2",
     "@hl037/vue-cli-plugin-ts-bundler": "hl037/vue-cli-plugin-ts-bundler.git",
+    "core-js": "^3.6.5",
     "dts-bundle": "^0.7.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
