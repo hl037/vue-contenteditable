@@ -28,7 +28,7 @@ function replaceAll(str: string, search: string, replacement: string) {
 const props = defineProps({
   'tag' : String,
   'contenteditable' : {
-    type : Boolean,
+    type : [Boolean, String],
     default : true,
   },
   'modelValue' : String,

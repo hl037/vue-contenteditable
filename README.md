@@ -149,9 +149,13 @@ Prop name | Type | Default | Description
 
 ## Changelogs
 
+### 4.0.1
+  
+  * Add String as contenteditable type (To support non-standard values)
+
 ### 4.0.0
 
-  * API change : `noNL` and `noHTML` renamed to `noNl` and `noHtml` to enable using dashed prop names (`no-nl` and `no-html` in templates).
+  * API **breaking** change : `noNL` and `noHTML` renamed to `noNl` and `noHtml` to enable using dashed prop names (`no-nl` and `no-html` in templates).
   * Build with vite instead of vue-cli : simpler build and less dev dependencies
   * Smaller package (previous version bundled vue... Oops.
 
