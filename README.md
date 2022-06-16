@@ -149,7 +149,7 @@ Prop name | Type | Default | Description
 
 ## Changelogs
 
-### 4.0.1
+### 4.0.2
   
   * Add String as contenteditable type (To support non-standard values)
 
