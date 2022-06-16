@@ -17,13 +17,15 @@ The response is generally "no".
 
 But... there are edge cases where neither `<input/>` nor `<textarea>` could suit, for example when you need a dynamic object size to adapt to the user input text's size.
 
+------
+
 ## Installation
 
 NOTE : Versions 3.0.0+ are only compatible with VueJS v3+. For VueJS v2, please install the version 1.0.2.
 
 ### With a build system
 
-I recommand using pnpm + vite for any vue project. You could indeed encounter problems due to several Vue instances using another package managers (errors like "Missing ref owner context"). Nevertheless, this package should work with any package manager.
+I recommand using pnpm + vite for any vue project. When using another package manager, you could encounter problems due to several Vue instances (errors like "Missing ref owner context"). Nevertheless, this package should work with any package manager.
 
 ```
     pnpm add vue-contenteditable
@@ -59,8 +61,10 @@ pnpm build
 ### Directely in html
 
 ```html
- <script src="contenteditable.min.js"></script>
+ <script src="contenteditable.umd.js"></script>
 ```
+
+------
 
 ## Global registration
 
@@ -94,6 +98,7 @@ const message = ref("hello")
 function enterPressed(){
   alert('Enter Pressed');
 }
+</script>
 ```
 
 ### Option style
@@ -121,6 +126,7 @@ export default {
     }
   }
 }
+</script>
 ```
 
 
