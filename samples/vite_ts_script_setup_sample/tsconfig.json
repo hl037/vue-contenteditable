@@ -2,15 +2,13 @@
   "compilerOptions": {
     "target": "esnext",
     "useDefineForClassFields": true,
-    "outDir": "dist",
-    "declaration": true,
     "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "skipLibCheck": true

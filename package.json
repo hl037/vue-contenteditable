@@ -1,11 +1,8 @@
 {
   "name": "vue-contenteditable",
-  "version": "3.0.4",
+  "version": "4.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-contenteditable src/main.ts",
-    "lint": "vue-cli-service lint",
-    "bundleDts": "vue-cli-service bundle-dts --name vue-contenteditable --createIndex"
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outFile dist/vue-contenteditable.js"
   },
   "author": "Léo Falventin Hauchecorne",
   "description": "This plugin provides a `<contenteditable/>` element supporting `v-model`. It also provides some (optional) features, like preventing html input and paste, or new lines.",
@@ -17,39 +14,30 @@
     "contenteditable",
     "input",
     "vue-contenteditable",
-    "v-model"
+    "v-model",
+    "typescript"
   ],
-  "homepage": "https://github.com/hl037/vue-contenteditable",
+  "homepage": "https://github.com/hl037/vue-contenteditable#vue-contenteditable",
   "bugs": {
     "url": "https://github.com/hl037/vue-contenteditable/issues",
     "email": "hl037.prog@gmail.com"
   },
   "license": "MIT",
   "repository": "github:hl037/vue-contenteditable",
-  "main": "dist/vue-contenteditable.umd.min.js",
   "files": [
-    "dist/*",
-    "index.d.ts"
+    "dist/*"
   ],
   "peerDependencies": {
-    "vue": "^3.0.0"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.33.0",
-    "@typescript-eslint/parser": "^2.33.0",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-typescript": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-typescript": "^5.0.2",
-    "@hl037/vue-cli-plugin-ts-bundler": "hl037/vue-cli-plugin-ts-bundler.git",
-    "core-js": "^3.6.5",
-    "dts-bundle": "^0.7.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0-0",
-    "typescript": "~3.9.3"
+    "vue": "^3.2.25",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vue-tsc": "^0.34.7"
   },
-  "entry": "src/main.ts",
-  "typings": "dist/vue-contenteditable.d.ts"
+  "type": "module",
+  "main": "dist/vue-contenteditable.es.js",
+  "types": "dist/vue-contenteditable.d.ts"
 }
