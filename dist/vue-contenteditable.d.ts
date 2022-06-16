@@ -87,7 +87,7 @@ declare module "components/contenteditable.vue.__VLS_script" {
     const _default: import("vue").DefineComponent<{
         tag: StringConstructor;
         contenteditable: {
-            type: BooleanConstructor;
+            type: (StringConstructor | BooleanConstructor)[];
             default: boolean;
         };
         modelValue: StringConstructor;
@@ -109,7 +109,7 @@ declare module "components/contenteditable.vue.__VLS_script" {
         props: Readonly<import("vue").ExtractPropTypes<{
             tag: StringConstructor;
             contenteditable: {
-                type: BooleanConstructor;
+                type: (StringConstructor | BooleanConstructor)[];
                 default: boolean;
             };
             modelValue: StringConstructor;
@@ -135,7 +135,7 @@ declare module "components/contenteditable.vue.__VLS_script" {
     }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
         tag: StringConstructor;
         contenteditable: {
-            type: BooleanConstructor;
+            type: (StringConstructor | BooleanConstructor)[];
             default: boolean;
         };
         modelValue: StringConstructor;
@@ -151,7 +151,7 @@ declare module "components/contenteditable.vue.__VLS_script" {
         onReturned?: ((value?: any) => any) | undefined;
         "onUpdate:modelValue"?: ((value?: any) => any) | undefined;
     }, {
-        contenteditable: boolean;
+        contenteditable: string | boolean;
         noHtml: boolean;
         noNl: boolean;
     }>;
@@ -160,7 +160,7 @@ declare module "components/contenteditable.vue.__VLS_script" {
         props: {
             tag: StringConstructor;
             contenteditable: {
-                type: BooleanConstructor;
+                type: (StringConstructor | BooleanConstructor)[];
                 default: boolean;
             };
             modelValue: StringConstructor;
@@ -189,7 +189,7 @@ declare module "components/contenteditable.vue" {
     const _default_1: import("vue").DefineComponent<{
         tag: StringConstructor;
         contenteditable: {
-            type: BooleanConstructor;
+            type: (StringConstructor | BooleanConstructor)[];
             default: boolean;
         };
         modelValue: StringConstructor;
@@ -207,7 +207,7 @@ declare module "components/contenteditable.vue" {
     }, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{
         tag: StringConstructor;
         contenteditable: {
-            type: BooleanConstructor;
+            type: (StringConstructor | BooleanConstructor)[];
             default: boolean;
         };
         modelValue: StringConstructor;
@@ -223,7 +223,7 @@ declare module "components/contenteditable.vue" {
         onReturned?: ((value?: any) => any) | undefined;
         "onUpdate:modelValue"?: ((value?: any) => any) | undefined;
     }, {
-        contenteditable: boolean;
+        contenteditable: string | boolean;
         noHtml: boolean;
         noNl: boolean;
     }>;

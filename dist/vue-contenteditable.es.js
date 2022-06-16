@@ -4,7 +4,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
     "tag": String,
     "contenteditable": {
-      type: Boolean,
+      type: [Boolean, String],
       default: true
     },
     "modelValue": String,
