@@ -51,14 +51,6 @@ const emit = defineEmits({
 
 const element = ref<HTMLElement | null>()
 
-onMounted(() => {
-  console.log({
-    'element.value' : element.value,
-  });
-})
-
-
-
 function currentContent(){
   return props.noHtml ? 
     element.value!.innerText
