@@ -27,11 +27,6 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       return str.split(search).join(replacement);
     }
     const element = ref();
-    onMounted(() => {
-      console.log({
-        "element.value": element.value
-      });
-    });
     function currentContent() {
       return props.noHtml ? element.value.innerText : element.value.innerHTML;
     }
