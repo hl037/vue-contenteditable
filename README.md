@@ -105,7 +105,7 @@ function enterPressed(){
 
 ```javascript
 <template>
-  <contenteditable tag="div" :contenteditable="isEditable" v-model="message" :noNL="true" :noHTML="true" @returned="enterPressed" />
+  <contenteditable tag="div" :contenteditable="isEditable" v-model="message" :no-nl="true" :no-html="true" @returned="enterPressed" />
 </template>
  
 <script>
