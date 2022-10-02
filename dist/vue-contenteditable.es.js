@@ -69,6 +69,10 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       var _a;
       updateContent((_a = props.modelValue) != null ? _a : "");
     });
+    watch(() => props.tag, (newval, oldval) => {
+      var _a;
+      updateContent((_a = props.modelValue) != null ? _a : "");
+    }, { flush: "post" });
     return (_ctx, _cache) => {
       return openBlock(), createBlock(resolveDynamicComponent(__props.tag), {
         contenteditable: __props.contenteditable,

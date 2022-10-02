@@ -1,6 +1,6 @@
 {
   "name": "vue-contenteditable",
-  "version": "4.0.4",
+  "version": "4.1.0",
   "scripts": {
     "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outFile dist/vue-contenteditable.js"
   },
