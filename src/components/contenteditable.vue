@@ -102,5 +102,8 @@ watch( () => props.noHtml, (newval, oldval)  => {
   updateContent(props.modelValue ?? '')
 })
 
+watch( () => props.tag, (newval, oldval)  => {
+  updateContent(props.modelValue ?? "");
+}, { flush: 'post' });
 </script>
 
