@@ -1,13 +1,15 @@
 <template>
   <div>
     <p>Content Editable :</p>
-    <contenteditable tag="div" :contenteditable="isEditable" v-model="message" :no-nl="noNL" :no-html="noHTML" @returned="enterPressed" @keyup="keyUp" @keypress="keyPress" />
+    <contenteditable :tag="tag" :contenteditable="isEditable" v-model="message" :no-nl="noNL" :no-html="noHTML" @returned="enterPressed" @keyup="keyUp" @keypress="keyPress" />
     <form action="">
       <input type="checkbox" id="editable" v-model="isEditable"/><label for="editable">Editable ?</label><br/>
       <input type="checkbox" id="nonl" v-model="noNL"/><label for="nonl">noNL ?</label><br/>
       <input type="checkbox" id="nohtml" v-model="noHTML"/><label for="nohtml">noHTML ?</label><br/>
       <label for="alt">Alternative input :</label>
-      <input type="text" id="alt" v-model="message"/>
+      <input type="text" id="alt" v-model="message"/><br/>
+      <label for="alt">Element type (tag prop) :</label>
+      <input type="text" id="tag" v-model="tag"/>
     </form>
       <p>Content :</p>
       <p>{{message}}</p>
@@ -39,6 +41,7 @@ export default defineComponent({
       event : ref(''),
       keyUpEv : ref(''),
       keyPressEv : ref(''),
+      tag : ref('div'),
     }
     return {
       ...r,
