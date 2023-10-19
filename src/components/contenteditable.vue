@@ -5,6 +5,7 @@
 
 <template>
   <component
+    v-if="noHtml"
     :is="tag"
     :contenteditable="contenteditable"
     @input="update"
@@ -13,7 +14,19 @@
     @keypress="onKeypress"
     ref="element"
   >
+    {{ initialValue }}
   </component>
+  <component
+    v-else
+    :is="tag"
+    :contenteditable="contenteditable"
+    @input="update"
+    @blur="update"
+    @paste="onPaste"
+    @keypress="onKeypress"
+    ref="element"
+    v-html="initialValue"
+  />
 </template>
 
 <script setup lang="ts">
@@ -106,5 +119,6 @@ watch( () => props.tag, (newval, oldval)  => {
   updateContent(props.modelValue ?? '');
 }, { flush: 'post' });
 
+const initialValue = props.modelValue
 </script>
 
