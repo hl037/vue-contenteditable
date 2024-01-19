@@ -15,10 +15,10 @@ dependencies:
 devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^2.3.3
-    version: 2.3.3(vite@2.9.12)(vue@3.2.37)
+    version: 2.3.3(vite@2.9.17)(vue@3.2.37)
   vite:
-    specifier: ^2.9.9
-    version: 2.9.12
+    specifier: ^2.9.17
+    version: 2.9.17
 
 packages:
 
@@ -40,14 +40,14 @@ packages:
       '@babel/helper-validator-identifier': 7.16.7
       to-fast-properties: 2.0.0
 
-  /@vitejs/plugin-vue@2.3.3(vite@2.9.12)(vue@3.2.37):
+  /@vitejs/plugin-vue@2.3.3(vite@2.9.17)(vue@3.2.37):
     resolution: {integrity: sha512-SmQLDyhz+6lGJhPELsBdzXGc+AcaT8stgkbiTFGpXPe8Tl1tJaBw1A6pxDqDuRsVkD8uscrkx3hA7QDOoKYtyw==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.9.12
+      vite: 2.9.17
       vue: 3.2.37
     dev: true
 
@@ -425,8 +425,8 @@ packages:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
 
-  /vite@2.9.12:
-    resolution: {integrity: sha512-suxC36dQo9Rq1qMB2qiRorNJtJAdxguu5TMvBHOc/F370KvqAe9t48vYp+/TbPKRNrMh/J55tOUmkuIqstZaew==}
+  /vite@2.9.17:
+    resolution: {integrity: sha512-XxcRzra6d7xrKXH66jZUgb+srThoPu+TLJc06GifUyKq9JmjHkc1Numc8ra0h56rju2jfVWw3B3fs5l3OFMvUw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
